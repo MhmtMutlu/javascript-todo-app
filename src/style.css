@@ -1,0 +1,192 @@
+*, ::after, ::before {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 35vh 65vh; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "header-section"
+    "todos-section"; 
+}
+
+.header-section {
+  grid-area: header-section;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #212529;
+}
+
+.header-title {
+  font-size: 50px;
+  margin: 10px 0 25px;
+  color: #f8f9fa;
+}
+
+.header-input {
+  font-size: 20px;
+  padding: 10px;
+  width: 350px;
+  border: none;
+  border-bottom: 5px solid #6c757d;
+  border-bottom-left-radius: 10px;
+  background-color: #f8f9fa;
+}
+
+.edit-input {
+  font-size: 20px;
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-bottom: 5px solid #212529;
+  border-bottom-left-radius: 10px;
+  background-color: inherit;
+}
+
+.add-button {
+  font-size: 20px;
+  font-weight: semibold;
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 5px solid #6c757d;
+  color: #212529;
+  background-color: #f8f9fa;
+  border-bottom-right-radius: 10px;
+  transition: 0.7s ease-out;
+}
+
+.edit-button {
+  width: 20%;
+  font-size: 20px;
+  font-weight: semibold;
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 5px solid #212529;
+  color: #212529;
+  background-color: inherit;
+  border-bottom-right-radius: 10px;
+  transition: 0.7s ease-out;
+}
+
+.add-button:hover {
+  cursor: pointer;
+  background-color: #dee2e6;
+}
+
+.edit-button:hover {
+  cursor: pointer;
+  background-color: #dee2e6;
+}
+
+.todos-section {
+  grid-area: todos-section;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f8f9fa;
+}
+
+.todos-ul {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.todos-ul li {
+  width: 400px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 5px 15px;
+  border-bottom: 5px solid #6c757d;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todos-ul li span {
+  transition: 0.7s ease-out;
+}
+
+.todos-ul li span:hover {
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.todos-ul li .done {
+  opacity: .6;
+  text-decoration: line-through;
+  color: #343a40;
+}
+
+.todolist li .done:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -.5rem;
+  display: block;
+  width: 0%;
+  height: 1px;
+  animation: strike .3s ease-out 0s forwards;
+}
+
+.close {
+  font-size: 16px;
+  background-color: #e63946;
+  padding: 5px 8px;
+  color: #dee2e6;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.7s ease-out;
+}
+
+.close:hover {
+  cursor: pointer;
+  background-color: #ae2012;
+}
+
+.remove-completed {
+  margin-top: 20px;
+  padding: 5px 0;
+  width: 400px;
+  border: none;
+  border-bottom: 5px solid #212529;
+  color: #212529;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: semibold;
+  background-color: inherit;
+  transition: 0.7s ease-out;
+}
+
+.remove-completed:hover {
+  color: #ae2012;
+  border-bottom: 5px solid #ae2012;
+  cursor: pointer;
+}
+
+.edit {
+  font-size: 16px;
+  background-color: inherit;
+  padding: 5px 8px;
+  color: #f4a261;
+  border: none;
+  text-align: center;
+  transition: 0.7s ease-out;
+}
+
+.edit:hover {
+  cursor: pointer;
+  color: #e76f51;
+}
