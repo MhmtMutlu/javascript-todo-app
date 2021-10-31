@@ -6,7 +6,7 @@
 
 ### Clone
    ```bash
-   git clone https://github.com/135-Inveon-FullStack-Bootcamp-Classroom/mehmet_mutlu_homeworks.git
+   git clone https://github.com/MhmtMutlu/javascript-todo-app.git
    ```
 
 ### Install
